@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cmd3.shell import command
 # from cmd3.shell import get_plugins_from_module
 import glob
@@ -53,10 +54,10 @@ class script:
                     (script, ext) = script.split(".")
                     script = script.replace("script_", "")
                     if self.echo:
-                        print "Import Script", script, "from", filename
+                        print("Import Script", script, "from", filename)
                     self.scripts[script] = filename
                 except:
-                    print ">>>>> ", filename
+                    print(">>>>> ", filename)
 
     def _list_scripts(self):
         Console.ok(10 * "-")
@@ -124,8 +125,8 @@ class script:
             self._list_scripts()
         else:
             Console.error("script execution not yet defined")
-            print arguments
-            print args
+            print(arguments)
+            print(args)
 
     '''
 

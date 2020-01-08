@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cloudmesh_base.locations import config_file
 from cloudmesh_base.ConfigDict import ConfigDict
 from cmd3.console import Console
@@ -15,7 +16,7 @@ class setup_management(object):
         try:
             self.config = ConfigDict(filename=self.filename)
             # print(self.config)
-        except Exception, e:
+        except Exception as e:
             Console.error("problem with ConfigDict")
             print(e)
 

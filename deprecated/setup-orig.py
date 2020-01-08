@@ -16,6 +16,7 @@
 # limitations under the License.                                          #
 # ------------------------------------------------------------------------#
 
+from __future__ import print_function
 version = "1.9.5"
 
 from setuptools.command.test import test as TestCommand
@@ -60,7 +61,7 @@ class SetupYaml(install):
 
         if os.path.isfile(cmd3_yaml):
             print ("ERROR: the file {0} already exists".format(cmd3_yaml))
-            print
+            print()
             print ("If you like to reinstall it, please remove the file")
         else:
             print ("Copy file:  {0} -> {1} ".format(path_expand("etc/cmd3.yaml"), cmd3_yaml))

@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cmd3.shell import command
 
 
@@ -29,5 +30,5 @@ class load:
         # except:
         #    #print "WARNING: could not find", module_name
         #    pass
-        print module
+        print(module)
 

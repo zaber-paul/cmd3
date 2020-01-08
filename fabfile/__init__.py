@@ -1,3 +1,4 @@
-import doc
+from __future__ import absolute_import
+from . import doc
 # import clean
-import security
+from . import security

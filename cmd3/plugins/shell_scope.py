@@ -1,3 +1,4 @@
+from __future__ import print_function
 import datetime
 import os
 
@@ -174,17 +175,17 @@ class shell_scope:
             self.block.append(line)
             # add line to block
         elif self.forblock is True:
-            print ">>>> EXECUTE LOOP"
-            print self.forstatement
-            print self.forblock
-            print self.block
+            print(">>>> EXECUTE LOOP")
+            print(self.forstatement)
+            print(self.forblock)
+            print(self.block)
             self.forblock = False
 
             (loopvar, values) = self.forstatement.split('in')
             loopvar = loopvar.replace("for", "").replace(" ", "")
             values = values.replace("[", "").replace("]", "").replace(" ", "")
             values = values.split(",")
-            print values
+            print(values)
             for v in values:
                 self.do_var("%s=%s" % (loopvar, v))
                 for l in self.block:
@@ -209,7 +210,7 @@ class shell_scope:
 
         line = line.strip()
         if line == "":
-            print
+            print()
             return line
 
         #

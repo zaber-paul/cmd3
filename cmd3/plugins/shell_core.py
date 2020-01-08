@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 import sys
 from textwrap import dedent
@@ -20,7 +21,7 @@ class shell_core:
 
         Prints out the help message for a given function
         """
-        print dedent(self.help_help.__doc__)
+        print(dedent(self.help_help.__doc__))
 
     def info_shell_core(self):
         """prints information about the shell core"""

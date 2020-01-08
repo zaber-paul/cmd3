@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cmd3.shell import command
 from cmd3.console import Console
 
@@ -48,7 +49,7 @@ class clear:
 
             Prints a banner form a one line text message.
         """
-        print arguments
+        print(arguments)
         n = int(arguments['-n'])
         c = arguments['-c']
         i = int(arguments['-i'])

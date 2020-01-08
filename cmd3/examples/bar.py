@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cmd3.shell import command
 
 
@@ -5,10 +6,10 @@ from cmd3.shell import command
 class bar:
 
     def activate_bar(self):
-        print "... activate bar"
+        print("... activate bar")
 
     def info_bar(self):
-        print "information for the class bar"
+        print("information for the class bar")
 
     @command
     def do_bar(self, arg, arguments):
@@ -26,4 +27,4 @@ class bar:
               -f      specify the file
 
         """
-        print arguments
+        print(arguments)

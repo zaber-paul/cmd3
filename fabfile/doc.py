@@ -1,3 +1,4 @@
+from __future__ import print_function
 from fabric.api import task, local, settings
 import sys
 import os
@@ -16,10 +17,10 @@ def cmd_exists(cmd):
 
 for cmd in ['pandoc','ipython']:    
     if not cmd_exists(cmd):
-        print "ERROR: {} is not installed.".format(cmd)
+        print("ERROR: {} is not installed.".format(cmd))
         sys.exit()
     else:
-        print cmd, "found. ok."
+        print(cmd, "found. ok.")
 
     
 @task
@@ -128,9 +129,9 @@ def man():
 @task
 def api():
     for modulename in ["cmd3"]:
-        print 70 * "="
-        print "Building API Doc:", modulename 
-        print 70 * "="        
+        print(70 * "=")
+        print("Building API Doc:", modulename) 
+        print(70 * "=")        
         local("sphinx-apidoc -f -o docs/source/api/{0} {0}".format(modulename))
 
 

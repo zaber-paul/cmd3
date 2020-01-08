@@ -203,7 +203,7 @@ def load_plugins(classprefix, plugin_list):
             # print ("LLL", load_module)
             exec(load_module)
             plugins.append(cls)
-        except Exception, e:
+        except Exception as e:
             # if echo:
             Console.error("loading module {0} {1}".format(str(plugin), str(classprefix)))
             Console.error(70 * "=")
@@ -487,7 +487,7 @@ def main():
             if echo:
                 print(">", user_cmd)
             cmd.onecmd(user_cmd)
-        except Exception, e:
+        except Exception as e:
             Console.error("")
             Console.error("ERROR: executing command '{0}'".format(user_cmd))
             Console.error("")

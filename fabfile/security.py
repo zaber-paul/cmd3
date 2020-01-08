@@ -1,3 +1,4 @@
+from __future__ import print_function
 from fabric.api import task, local
 import sys
 import os

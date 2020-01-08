@@ -1,3 +1,4 @@
+from __future__ import print_function
 import textwrap
 
 from cmd3.shell import command
@@ -17,14 +18,14 @@ class rst:
 
         """
 
-        print
-        print "Command - %s::" % what
+        print()
+        print("Command - %s::" % what)
 
         exec ("h = self.do_%s.__doc__" % what)
         # noinspection PyUnboundLocalVariable
         h = textwrap.dedent(h).replace("::\n\n", "")
         h = textwrap.dedent(h).replace("\n", "\n    ")
-        print h
+        print(h)
 
     @command
     def do_man(self, args, arguments):
@@ -49,24 +50,24 @@ class rst:
         """
         if arguments['COMMAND'] is None:
 
-            print
-            print "Commands"
-            print 70 * "="
+            print()
+            print("Commands")
+            print(70 * "=")
 
             commands = [k for k in dir(self) if k.startswith("do_")]
             commands.sort()
 
         else:
-            print arguments
+            print(arguments)
             commands = [arguments['COMMAND']]
 
         for command in commands:
             what = command.replace("do_", "")
             try:
                 if not arguments["--noheader"]:
-                    print what
-                    print 70 * "-"
+                    print(what)
+                    print(70 * "-")
                 self._print_rst(what)
             except:
-                print "\n    Command documentation %s missing, help_%s" % (what, what)
-            print
+                print("\n    Command documentation %s missing, help_%s" % (what, what))
+            print()

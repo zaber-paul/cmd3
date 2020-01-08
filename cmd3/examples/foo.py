@@ -1,3 +1,4 @@
+from __future__ import print_function
 class foo:
 
     def activate_foo(self):
@@ -9,4 +10,4 @@ class foo:
             foo line
 
         """
-        print "FOO", arg
+        print("FOO", arg)

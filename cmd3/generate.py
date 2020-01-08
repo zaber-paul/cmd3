@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+from __future__ import print_function
 import os
 from docopt import docopt
 import sys
@@ -9,7 +10,7 @@ from cmd3.console import Console
 def replace_dict(filename, data):
     if filename is None or filename == "":
         return
-    print "Converting:", filename
+    print("Converting:", filename)
     # read content
     with open(filename, 'r') as f:
         content = str(f.readlines())
@@ -24,7 +25,7 @@ def replace_dict(filename, data):
 def replace_string(filename, data):
     if filename is None or filename == "":
         return
-    print "Converting:", filename
+    print("Converting:", filename)
     # read content
     with open(filename, 'r') as f:
         content = f.readlines()
@@ -83,8 +84,8 @@ def generate_command(command=None,
 
 
     banner("Generating Cloudmesh Command")
-    print "Command:", data['command']
-    print "Package:", data['package']
+    print("Command:", data['command'])
+    print("Package:", data['package'])
 
     banner("Setup Directory with Package and Command")
     # mv {path}/{package}/shell_plugins.py.in {path}/{package}/shell_plugins.py
@@ -102,7 +103,7 @@ def generate_command(command=None,
     for line in script.split("\n"):
         line = line.strip()
         if line != "":
-            print line
+            print(line)
             os.system(line)
 
     banner("replacing command and package name in template files")

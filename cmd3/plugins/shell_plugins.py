@@ -1,3 +1,4 @@
+from __future__ import print_function
 from cmd3.shell import command
 from cmd3.console import Console
 from cmd3.setup_management import setup_management

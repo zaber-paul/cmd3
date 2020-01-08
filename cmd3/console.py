@@ -1,3 +1,4 @@
+from __future__ import print_function
 import textwrap
 
 
@@ -72,28 +73,28 @@ class Console(object):
         if Console.color:
             Console._print('FAIL', text, message)
         else:
-            print Console._msg(text + message)
+            print(Console._msg(text + message))
 
     @staticmethod
     def info(message):
         if Console.color:
             Console._print('OKBLUE', "INFO: ", message)
         else:
-            print Console._msg("INFO: " + message)
+            print(Console._msg("INFO: " + message))
 
     @staticmethod
     def warning(message):
         if Console.color:
             Console._print('WARNING', "WARNING: ", message)
         else:
-            print Console._msg("WARNING: " + message)
+            print(Console._msg("WARNING: " + message))
 
     @staticmethod
     def ok(message):
         if Console.color:
             Console._print('OKGREEN', "", message)
         else:
-            print Console._msg(message)
+            print(Console._msg(message))
 
     @staticmethod
     def _print(color, prefix, message):
