@@ -168,7 +168,7 @@ class script(object):
 		        subdirectory.
         """
         
-        print "HALLO"
+        print("HALLO")
 
         module_name = arguments["MODULENAME"]
 
@@ -176,10 +176,10 @@ class script(object):
 
 
             plugins.append(dict(get_plugins_from_module('cloudmesh_cmd3.plugins')))
-        except Exception, e:	
+        except Exception as e:	
             # ignoring in case the module is not there
-            print "ERROR: loading module", module_name
-            print e
+            print("ERROR: loading module", module_name)
+            print(e)
 
 
         '''

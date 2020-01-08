@@ -39,20 +39,20 @@ Here are the sample classes::
    class bar:
 
        def activate_bar(self):
-           print "... activate bar"
+           print("... activate bar")
 
        def do_that(self, arg):
-           print "THAT", arg
+           print("THAT", arg)
 
 
    class foo:
 
        def do_this(self, arg):
-           print "THIS", arg
+           print("THIS", arg)
            self.activate_status()
 
        def activate_foo(self):
-           print "... activate foo"
+           print("... activate foo")
 
    class activate:
 
@@ -67,7 +67,7 @@ Here are the sample classes::
            self.activate_status()
 
        def activate_status(self):
-           print "Active:", self.active
+           print("Active:", self.active)
 
        def activate(self, plugins):
            d = dir(self)
@@ -75,9 +75,9 @@ Here are the sample classes::
            for key in d:
                if key.startswith("activate_"):
                    result.append(key)
-           print result
+           print(result)
            for key in result:
-               print "> %s" % key.replace("_"," ")
+               print("> %s" % key.replace("_"," "))
                exec("self.%s()" % key)
 """
 
@@ -442,7 +442,7 @@ def main():
         try:
             plugins.append(dict(get_plugins_from_module(module_name)))
         except:
-            # print "WARNING: could not find", module_name
+            # print("WARNING: could not find", module_name)
             pass
 
     # sys.exit()

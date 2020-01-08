@@ -86,7 +86,7 @@ def read(fname):
 home = os.path.expanduser("~")
 
 #home + '/.cloudmesh'
-#print [ (home + '/.cloudmesh/' + d, [os.path.join(d, f) for f in files]) for d, folders, files in os.walk('etc')],
+#print([ (home + '/.cloudmesh/' + d, [os.path.join(d, f) for f in files]) for d, folders, files in os.walk('etc')],)
 #sys.exit()
 
 data_files= [ (home + '/.cloudmesh/' + d.lstrip('cmd3/'),

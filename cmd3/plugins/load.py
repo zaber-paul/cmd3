@@ -29,7 +29,7 @@ class load(object):
         # try:
         #    plugins.append(dict(get_plugins_from_module(module_name)))
         # except:
-        #    #print "WARNING: could not find", module_name
+        #    #print("WARNING: could not find", module_name)
         #    pass
         print(module)
 

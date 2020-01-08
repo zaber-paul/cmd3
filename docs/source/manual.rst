@@ -271,10 +271,10 @@ Here is the sample class from the file plugins/foo.py::
    class foo:
 
        def activate_foo(self):
-           print "... activate foo"
+           print("... activate foo")
 
        def do_foo(self, arg):
-           print "I am Foo", arg
+           print("I am Foo", arg)
 
 Now place this module in your plugins directory and you are all
 set. when you start the shell and say::
@@ -311,7 +311,7 @@ So let us create a new plugin called bar::
    class bar:
 
        def activate_bar(self):
-           print "... activate bar"
+           print("... activate bar")
 
        @command
        def do_bar(self, arg, arguments):
@@ -332,8 +332,8 @@ So let us create a new plugin called bar::
 	        bar filename
 
 		     executes the bar command with the given filename
-		     
-            print arguments
+
+            print(arguments)
 
 Please note the differences to our previous class. We have introduced a
 decorator that transforms the do_bar method into a method that returns
@@ -361,10 +361,10 @@ So let us enhance the previous plugin while adding an information::
    class bar:
 
        def activate_bar(self):
-           print "... activate bar"
+           print("... activate bar")
 
        def info_bar(self):
-           print "information for the class bar"
+           print("information for the class bar")
 
        @command
        def do_bar(self, arg, arguments):
@@ -388,7 +388,7 @@ So let us enhance the previous plugin while adding an information::
 		        executes the bar command with the given filename
 
             """
-            print arguments
+            print(arguments)
 
 When you call the command::
 

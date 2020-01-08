@@ -52,8 +52,8 @@ class timer(object):
                 Implementation note: we have a stopwatch in cloudmesh,
                                      that we could copy into cmd3
         """
-        # print arguments
-        # print "args", args
+        # print(arguments)
+        # print("args", args)
         args = args.lower()
 
         if args in ("on", "off"):

@@ -112,9 +112,9 @@ class Console(object):
 from cmd3.console import Console
 
 
-print Console.color
+print(Console.color)
 
-print Console.theme
+print(Console.theme)
 
 Console.warning("Warning")
 Console.error("Error")
@@ -122,7 +122,7 @@ Console.info("Info")
 Console.msg("msg")
 Console.ok("Success")
 
-print Console.color = False
+print(Console.color = False)
 Console.error("Error")
 
 """
