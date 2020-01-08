@@ -1,4 +1,7 @@
 from __future__ import print_function
+from builtins import str
+from builtins import input
+from builtins import object
 import os
 import sys
 from textwrap import dedent
@@ -12,7 +15,7 @@ import cloudmesh_base
 import cmd3
 
 
-class shell_core:
+class shell_core(object):
 
     def help_help(self):
         """
@@ -99,7 +102,7 @@ class shell_core:
                 else:
                     if self.use_rawinput:
                         try:
-                            line = raw_input(self.prompt)
+                            line = eval(input(self.prompt))
                         except EOFError:
                             line = 'EOF'
                     else:

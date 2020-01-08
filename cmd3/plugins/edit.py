@@ -1,4 +1,6 @@
 from __future__ import print_function
+from builtins import str
+from builtins import object
 import os
 import platform
 
@@ -6,7 +8,7 @@ from cmd3.shell import command
 from cmd3.console import Console
 
 # noinspection PyUnusedLocal
-class edit:
+class edit(object):
 
     #
     # EDIT

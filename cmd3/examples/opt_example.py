@@ -1,9 +1,10 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 
 
 # noinspection PyUnusedLocal
-class opt_example:
+class opt_example(object):
     """opt_example class"""
 
     def activate_opt_example(self):

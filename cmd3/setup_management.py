@@ -1,4 +1,5 @@
 from __future__ import print_function
+from builtins import object
 from cloudmesh_base.locations import config_file
 from cloudmesh_base.ConfigDict import ConfigDict
 from cmd3.console import Console

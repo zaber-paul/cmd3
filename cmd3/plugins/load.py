@@ -1,9 +1,10 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 
 
 # noinspection PyUnusedLocal
-class load:
+class load(object):
 
     def activate_load(self):
         """activates the load command"""

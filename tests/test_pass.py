@@ -8,9 +8,10 @@ nosetests -v
 
 """
 
+from builtins import object
 from cloudmesh_base.util import HEADING
 
-class Test_pass:
+class Test_pass(object):
 
     def setup(self):
         pass

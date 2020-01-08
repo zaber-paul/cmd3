@@ -1,3 +1,4 @@
+from builtins import object
 import webbrowser
 import os
 
@@ -5,7 +6,7 @@ from cmd3.shell import command
 from cmd3.console import Console
 
 # noinspection PyUnusedLocal
-class browser:
+class browser(object):
 
     #
     # Browser

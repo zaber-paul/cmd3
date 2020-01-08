@@ -1,9 +1,10 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 
 
 # noinspection PyUnusedLocal
-class metric:
+class metric(object):
 
     def activate_metric(self):
         pass

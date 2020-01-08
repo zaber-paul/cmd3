@@ -1,4 +1,5 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 from cmd3.console import Console
 
@@ -6,7 +7,7 @@ import os
 import sys
 
 
-class clear:
+class clear(object):
 
     #
     # CLEAR

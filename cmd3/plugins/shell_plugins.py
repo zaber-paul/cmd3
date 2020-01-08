@@ -1,9 +1,10 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 from cmd3.console import Console
 from cmd3.setup_management import setup_management
 
-class shell_plugins:
+class shell_plugins(object):
 
     # Not needed as we moved this to cmd3
     #

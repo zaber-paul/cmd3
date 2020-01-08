@@ -1,8 +1,10 @@
+from builtins import str
+from builtins import object
 import string
 from cmd3.console import Console
 
 # noinspection PyUnusedLocal
-class activate:
+class activate(object):
     command_topics = {}
     plugins = []
 

@@ -1,8 +1,10 @@
+from builtins import str
+from builtins import object
 from cmd3.shell import command
 from cmd3.console import Console
 
 # noinspection PyUnusedLocal
-class info:
+class info(object):
 
     def print_info(self):
         """prints some info that the user may find useful"""

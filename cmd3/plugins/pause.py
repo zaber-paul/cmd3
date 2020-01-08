@@ -1,8 +1,10 @@
+from builtins import input
+from builtins import object
 from cmd3.shell import command
 
 
 # noinspection PyUnusedLocal
-class pause:
+class pause(object):
 
     def activate_pause(self):
         """activates the pause command"""
@@ -21,4 +23,4 @@ class pause:
             Arguments:
                MESSAGE  message to be displayed
         """
-        raw_input(arg + '\n')
+        eval(input(arg + '\n'))

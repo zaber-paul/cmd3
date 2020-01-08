@@ -1,10 +1,11 @@
+from builtins import object
 import os
 import os.path
 
 from cmd3.shell import command
 
 
-class graphviz:
+class graphviz(object):
 
     def activate_graphviz(self):
         """activates the graphviz command"""

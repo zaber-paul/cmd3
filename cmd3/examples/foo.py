@@ -1,5 +1,6 @@
 from __future__ import print_function
-class foo:
+from builtins import object
+class foo(object):
 
     def activate_foo(self):
         pass

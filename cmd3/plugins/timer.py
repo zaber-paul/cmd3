@@ -1,7 +1,8 @@
+from builtins import object
 from cmd3.shell import command
 from cmd3.console import Console
 
-class timer:
+class timer(object):
 
     """
     needs to be integrated in pre post command

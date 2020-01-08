@@ -1,4 +1,6 @@
 from __future__ import print_function
+from builtins import str
+from builtins import object
 from cmd3.shell import command
 # from cmd3.shell import get_plugins_from_module
 import glob
@@ -6,7 +8,7 @@ import os
 from cmd3.console import Console
 
 # noinspection PyShadowingNames
-class script:
+class script(object):
     #
     # Scripts
     #

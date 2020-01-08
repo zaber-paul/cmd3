@@ -1,9 +1,10 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import command
 
 
 # noinspection PyUnusedLocal
-class bar:
+class bar(object):
 
     def activate_bar(self):
         print("... activate bar")

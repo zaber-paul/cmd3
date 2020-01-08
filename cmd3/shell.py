@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 from __future__ import print_function
+from builtins import str
+from builtins import object
 """
 This project is about developing a dynamic CMD class based on cmd.CMD.
 We assume the following directory structure::
@@ -367,7 +369,7 @@ def get_plugins_from_module(name):
     return dict(get_plugins_from_dir(package_location, class_name))
 
 
-class plugin_manager:
+class plugin_manager(object):
 
     # TODO: verify, used to be just __init__():
     def __init__(self):

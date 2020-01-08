@@ -1,8 +1,9 @@
 # coding=utf-8
+from builtins import object
 from cmd3.shell import command
 from cmd3.generate import generate_command
 
-class shell_generate:
+class shell_generate(object):
 
     # Not needed as we moved this to cmd3
     #

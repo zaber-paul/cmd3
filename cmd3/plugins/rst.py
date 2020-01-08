@@ -1,10 +1,13 @@
 from __future__ import print_function
+from future import standard_library
+standard_library.install_aliases()
+from builtins import object
 import textwrap
 
 from cmd3.shell import command
 
 
-class rst:
+class rst(object):
     def activate_rst(self):
         """activates the RST command"""
         pass

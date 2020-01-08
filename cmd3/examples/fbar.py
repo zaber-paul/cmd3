@@ -1,4 +1,5 @@
 from __future__ import print_function
+from builtins import object
 from cmd3.shell import function_command
 
 
@@ -15,7 +16,7 @@ def main_func(arguments):
 
 
 # noinspection PyUnusedLocal
-class fbar:
+class fbar(object):
 
     def activate_fbar(self):
         print("... activate fbar")

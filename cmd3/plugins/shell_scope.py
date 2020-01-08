@@ -1,4 +1,6 @@
 from __future__ import print_function
+from builtins import str
+from builtins import object
 import datetime
 import os
 
@@ -10,7 +12,7 @@ from cloudmesh_base.util import path_expand
 # TODO BUG, loglevel and debug need to vbe stored once they are set into cmd3.yaml
 
 # noinspection PyUnusedLocal
-class shell_scope:
+class shell_scope(object):
 
     loglevel = "ERROR"
     debug = False

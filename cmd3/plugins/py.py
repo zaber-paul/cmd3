@@ -1,3 +1,4 @@
+from builtins import object
 from code import InteractiveConsole
 import sys
 """ This code has been copied and modified from cmd2 to work with cmd3"""
@@ -26,7 +27,7 @@ class Statekeeper(object):
 
 
 # noinspection PyShadowingBuiltins,PyShadowingNames
-class py:
+class py(object):
 
     pystate = {}
     locals_in_py = True

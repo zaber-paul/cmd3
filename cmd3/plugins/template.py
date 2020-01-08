@@ -1,7 +1,8 @@
+from builtins import object
 import textwrap
 from cmd3.console import Console
 
-class template:
+class template(object):
 
     def activate_template(self):
         """activates the template"""
