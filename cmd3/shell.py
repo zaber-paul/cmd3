@@ -82,7 +82,7 @@ Here are the sample classes::
 """
 
 import textwrap
-from compiler.ast import flatten
+# from compiler.ast import flatten
 from docopt import docopt
 from pprint import pprint
 import cmd
